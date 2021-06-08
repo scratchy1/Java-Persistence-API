@@ -1,0 +1,7 @@
+Person bob = new Person("Bob", 42);
+em.persist(bob);
+Person p123 = em.find( Person.class, 123 );
+bob.setAge( bob.getAge() + 1 );
+em.merge(bob);
+em.remove(bob);
+//C reate, R ead, U pdate, D elete
