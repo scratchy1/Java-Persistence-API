@@ -1,0 +1,4 @@
+TypedQuery<Person> q =
+em.createQuery("SELECT p FROM Person p WHERE age >= :value");
+q.setParameter("value", 42);
+List<Person> l = q.getResultList();
