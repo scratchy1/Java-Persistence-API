@@ -1,0 +1,23 @@
+@Entity
+@Table(name="Authors")
+public class Author {
+@Column("NAME_ID")
+String name;
+@OneToMany(mappedBy="author")
+List<Title> titles;
+// constructor
+// getter/setter name
+// getter/setter titles
+}
+@Entity
+@Table(name="BOOKS")
+public class Title {
+@COLUMN("TITLE_ID")
+String title;
+@ManyToOne
+@JoinColumn("NAME_ID")
+Author author;
+// constructor
+// getter/setter title
+// getter/setter author
+}
