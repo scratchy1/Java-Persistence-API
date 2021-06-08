@@ -1,0 +1,16 @@
+@Entity
+public class Person {
+private long id;
+private String name;
+private int age;
+public Personne( String name, int age ) {
+this.name = name;
+this.age = age;
+}
+@Id
+@GeneratedValue // automatically generated
+public long getId() { return id; }
+public void setId( long id ) { this.id = id; }
+// methods getName, setName, getAge, setAge
+}
+// @Id is the primary key
